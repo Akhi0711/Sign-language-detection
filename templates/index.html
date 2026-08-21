@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        SignVision | ASL Sign Language AI
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     NAVIGATION
+========================================== -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            <span></span>
+        </div>
+
+        <div>
+
+            <h2>
+                Sign<span>Vision</span>
+            </h2>
+
+            <small>
+                ASL AI DETECTION
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="#" class="active">
+            Workspace
+        </a>
+
+        <a href="#">
+            History
+        </a>
+
+        <a href="#">
+            API Docs
+        </a>
+
+        <div class="profile">
+
+            <div class="profile-circle">
+                U
+            </div>
+
+            <span>
+                User
+            </span>
+
+            <span class="arrow">
+                ⌄
+            </span>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ==========================================
+     MAIN
+========================================== -->
+
+<main class="container">
+
+
+<!-- ==========================================
+     HEADER
+========================================== -->
+
+<section class="page-header">
+
+    <div>
+
+        <div class="status">
+
+            <span class="status-dot"></span>
+
+            AI ENGINE ONLINE
+
+        </div>
+
+
+        <h1>
+
+            ASL Sign Language
+
+            <span>
+                Detection
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            Upload a hand-sign image and let
+            SignVision identify the ASL sign
+            using artificial intelligence.
+
+        </p>
+
+    </div>
+
+
+    <div class="model-status">
+
+        <div class="pulse"></div>
+
+        <div>
+
+            <strong>
+                Model Ready
+            </strong>
+
+            <small>
+                29 ASL classes
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     WORKSPACE
+========================================== -->
+
+<section class="workspace">
+
+
+<!-- ==========================================
+     LEFT PANEL
+========================================== -->
+
+<div class="card upload-card">
+
+
+    <div class="card-header">
+
+        <div>
+
+            <span class="section-label">
+                INPUT
+            </span>
+
+            <h2>
+                Upload Sign
+            </h2>
+
+        </div>
+
+        <div class="step-number">
+            01
+        </div>
+
+    </div>
+
+
+
+    <!-- DROP ZONE -->
+
+    <div
+        class="drop-zone"
+        id="dropZone"
+    >
+
+        <div class="upload-icon">
+
+            <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+            >
+
+                <path d="M12 16V4"/>
+
+                <path d="M7 9l5-5 5 5"/>
+
+                <path d="M5 20h14"/>
+
+            </svg>
+
+        </div>
+
+
+        <h3>
+            Drop your sign image here
+        </h3>
+
+
+        <p>
+            Drag & drop an ASL image or browse
+            files from your computer.
+        </p>
+
+
+        <span class="file-types">
+
+            JPG • JPEG • PNG
+
+        </span>
+
+
+        <input
+            type="file"
+            id="fileInput"
+            accept="image/png,image/jpeg,image/jpg"
+            hidden
+        >
+
+
+        <button
+            type="button"
+            class="browse-btn"
+            id="browseBtn"
+        >
+
+            Browse Files
+
+        </button>
+
+    </div>
+
+
+
+    <!-- QUICK ACTIONS -->
+
+    <div class="quick-actions">
+
+
+        <button
+            type="button"
+            class="action-btn primary"
+            id="uploadBtn"
+        >
+
+            <span>
+                ＋
+            </span>
+
+            Upload Image
+
+        </button>
+
+
+        <button
+            type="button"
+            class="action-btn"
+            id="cameraBtn"
+        >
+
+            <span>
+                ◉
+            </span>
+
+            Live Camera
+
+        </button>
+
+    </div>
+
+
+
+    <!-- SAMPLE SIGNS -->
+
+    <div class="samples">
+
+        <div class="samples-title">
+
+            <span>
+                QUICK TEST
+            </span>
+
+            <small>
+                Sample ASL signs
+            </small>
+
+        </div>
+
+
+        <div class="sample-grid">
+
+            <button
+                type="button"
+                class="sample"
+            >
+
+                <span>A</span>
+
+                <small>
+                    Letter A
+                </small>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="sample"
+            >
+
+                <span>B</span>
+
+                <small>
+                    Letter B
+                </small>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="sample"
+            >
+
+                <span>C</span>
+
+                <small>
+                    Letter C
+                </small>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="sample"
+            >
+
+                <span>D</span>
+
+                <small>
+                    Letter D
+                </small>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="sample"
+            >
+
+                <span>E</span>
+
+                <small>
+                    Letter E
+                </small>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="sample"
+            >
+
+                <span>S</span>
+
+                <small>
+                    Letter S
+                </small>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==========================================
+     RIGHT PANEL
+========================================== -->
+
+<div class="card result-card">
+
+
+    <div class="card-header">
+
+        <div>
+
+            <span class="section-label">
+                AI INTELLIGENCE
+            </span>
+
+            <h2>
+                Detection Result
+            </h2>
+
+        </div>
+
+
+        <div class="ai-badge">
+
+            <span class="status-dot"></span>
+
+            AI READY
+
+        </div>
+
+    </div>
+
+
+
+    <!-- EMPTY STATE -->
+
+    <div
+        class="empty-state"
+        id="emptyState"
+    >
+
+        <div class="radar">
+
+            <div
+                class="radar-ring ring-1"
+            ></div>
+
+            <div
+                class="radar-ring ring-2"
+            ></div>
+
+            <div
+                class="radar-ring ring-3"
+            ></div>
+
+            <div class="radar-center">
+                ✋
+            </div>
+
+        </div>
+
+
+        <h3>
+            Awaiting image...
+        </h3>
+
+
+        <p>
+            Upload or capture an ASL sign
+            to initialize SignVision AI.
+        </p>
+
+    </div>
+
+
+
+    <!-- RESULT STATE -->
+
+    <div
+        class="result-content"
+        id="resultContent"
+        style="display: none;"
+    >
+
+
+        <div class="image-container">
+
+
+            <img
+                id="previewImage"
+                src=""
+                alt="ASL Sign"
+            >
+
+
+            <div class="scan-line"></div>
+
+
+            <div class="corner top-left"></div>
+
+            <div class="corner top-right"></div>
+
+            <div class="corner bottom-left"></div>
+
+            <div class="corner bottom-right"></div>
+
+
+            <div class="detection-label">
+                ASL SIGN
+            </div>
+
+        </div>
+
+
+
+        <!-- RESULT -->
+
+        <div class="analysis">
+
+
+            <div class="result-title">
+
+
+                <div>
+
+                    <span class="section-label">
+                        DETECTED SIGN
+                    </span>
+
+
+                    <div
+                        class="detected-letter"
+                        id="detectedLetter"
+                    >
+                        —
+                    </div>
+
+                </div>
+
+
+                <div class="sign-badge">
+                    ASL ALPHABET
+                </div>
+
+            </div>
+
+
+
+            <!-- CONFIDENCE -->
+
+            <div class="confidence">
+
+
+                <div class="confidence-header">
+
+                    <span>
+                        Confidence
+                    </span>
+
+
+                    <strong
+                        id="confidenceValue"
+                    >
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <div
+                        class="progress-fill"
+                        id="progressFill"
+                        style="width: 0%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MEANING -->
+
+            <div class="meaning">
+
+
+                <div class="meaning-icon">
+                    ✦
+                </div>
+
+
+                <div>
+
+                    <span>
+                        DECODED MEANING
+                    </span>
+
+
+                    <p id="meaningText">
+
+                        Upload an ASL image
+                        to detect the sign.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ACTIONS -->
+
+            <div class="toolbar">
+
+
+                <button
+                    type="button"
+                    class="tool-btn"
+                    id="copyBtn"
+                >
+
+                    ⧉
+
+                    Copy Report
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="tool-btn"
+                    id="jsonBtn"
+                >
+
+                    ↓
+
+                    Export JSON
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="tool-btn save"
+                >
+
+                    ♡
+
+                    Save
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- ==========================================
+     SUPPORTED SIGNS
+========================================== -->
+
+<section class="supported">
+
+
+    <div class="supported-header">
+
+
+        <div>
+
+            <span class="section-label">
+                MODEL CAPABILITIES
+            </span>
+
+
+            <h2>
+                Supported ASL Classes
+            </h2>
+
+        </div>
+
+
+        <span class="class-count">
+            29 CLASSES
+        </span>
+
+    </div>
+
+
+
+    <div class="letters">
+
+        <span>A</span>
+        <span>B</span>
+        <span>C</span>
+        <span>D</span>
+        <span>E</span>
+        <span>F</span>
+        <span>G</span>
+        <span>H</span>
+        <span>I</span>
+        <span>J</span>
+        <span>K</span>
+        <span>L</span>
+        <span>M</span>
+        <span>N</span>
+        <span>O</span>
+        <span>P</span>
+        <span>Q</span>
+        <span>R</span>
+        <span>S</span>
+        <span>T</span>
+        <span>U</span>
+        <span>V</span>
+        <span>W</span>
+        <span>X</span>
+        <span>Y</span>
+        <span>Z</span>
+
+        <span class="special">
+            DEL
+        </span>
+
+        <span class="special">
+            SPACE
+        </span>
+
+        <span class="special">
+            NOTHING
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer>
+
+
+    <div>
+
+        <strong>
+            SignVision
+        </strong>
+
+        <span>
+            ASL Recognition System
+        </span>
+
+    </div>
+
+
+    <span>
+        Powered by TensorFlow • AI Vision Engine
+    </span>
+
+</footer>
+
+
+</main>
+
+
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+
+<script>
+
+
+// ==========================================
+// ELEMENTS
+// ==========================================
+
+const fileInput =
+    document.getElementById(
+        "fileInput"
+    );
+
+
+const browseBtn =
+    document.getElementById(
+        "browseBtn"
+    );
+
+
+const uploadBtn =
+    document.getElementById(
+        "uploadBtn"
+    );
+
+
+const dropZone =
+    document.getElementById(
+        "dropZone"
+    );
+
+
+const emptyState =
+    document.getElementById(
+        "emptyState"
+    );
+
+
+const resultContent =
+    document.getElementById(
+        "resultContent"
+    );
+
+
+const previewImage =
+    document.getElementById(
+        "previewImage"
+    );
+
+
+const detectedLetter =
+    document.getElementById(
+        "detectedLetter"
+    );
+
+
+const confidenceValue =
+    document.getElementById(
+        "confidenceValue"
+    );
+
+
+const progressFill =
+    document.getElementById(
+        "progressFill"
+    );
+
+
+const meaningText =
+    document.getElementById(
+        "meaningText"
+    );
+
+
+const copyBtn =
+    document.getElementById(
+        "copyBtn"
+    );
+
+
+const jsonBtn =
+    document.getElementById(
+        "jsonBtn"
+    );
+
+
+
+// ==========================================
+// BROWSE
+// ==========================================
+
+browseBtn.addEventListener(
+    "click",
+    function () {
+
+        fileInput.click();
+
+    }
+);
+
+
+
+// ==========================================
+// UPLOAD BUTTON
+// ==========================================
+
+uploadBtn.addEventListener(
+    "click",
+    function () {
+
+        fileInput.click();
+
+    }
+);
+
+
+
+// ==========================================
+// FILE SELECTED
+// ==========================================
+
+fileInput.addEventListener(
+    "change",
+    function (event) {
+
+        const file =
+            event.target.files[0];
+
+        if (file) {
+
+            sendImage(file);
+
+        }
+
+    }
+);
+
+
+
+// ==========================================
+// DRAG OVER
+// ==========================================
+
+dropZone.addEventListener(
+    "dragover",
+    function (event) {
+
+        event.preventDefault();
+
+        dropZone.classList.add(
+            "dragging"
+        );
+
+    }
+);
+
+
+
+// ==========================================
+// DRAG LEAVE
+// ==========================================
+
+dropZone.addEventListener(
+    "dragleave",
+    function () {
+
+        dropZone.classList.remove(
+            "dragging"
+        );
+
+    }
+);
+
+
+
+// ==========================================
+// DROP
+// ==========================================
+
+dropZone.addEventListener(
+    "drop",
+    function (event) {
+
+        event.preventDefault();
+
+        dropZone.classList.remove(
+            "dragging"
+        );
+
+        const file =
+            event.dataTransfer.files[0];
+
+        if (file) {
+
+            sendImage(file);
+
+        }
+
+    }
+);
+
+
+
+// ==========================================
+// SEND IMAGE TO FLASK
+// ==========================================
+
+async function sendImage(file) {
+
+
+    // --------------------------------------
+    // Check image
+    // --------------------------------------
+
+    if (
+        !file.type.startsWith(
+            "image/"
+        )
+    ) {
+
+        alert(
+            "Please select an image file."
+        );
+
+        return;
+
+    }
+
+
+    // --------------------------------------
+    // Preview image
+    // --------------------------------------
+
+    const reader =
+        new FileReader();
+
+
+    reader.onload =
+        function (event) {
+
+            previewImage.src =
+                event.target.result;
+
+            emptyState.style.display =
+                "none";
+
+            resultContent.style.display =
+                "block";
+
+        };
+
+
+    reader.readAsDataURL(
+        file
+    );
+
+
+    // --------------------------------------
+    // Loading state
+    // --------------------------------------
+
+    detectedLetter.textContent =
+        "...";
+
+
+    confidenceValue.textContent =
+        "Detecting...";
+
+
+    progressFill.style.width =
+        "0%";
+
+
+    meaningText.textContent =
+        "AI is analyzing the uploaded sign...";
+
+
+    // --------------------------------------
+    // FormData
+    // --------------------------------------
+
+    const formData =
+        new FormData();
+
+
+    formData.append(
+        "image",
+        file
+    );
+
+
+    try {
+
+
+        // ----------------------------------
+        // SEND TO FLASK
+        // ----------------------------------
+
+        const response =
+            await fetch(
+                "/predict",
+                {
+                    method: "POST",
+                    body: formData
+                }
+            );
+
+
+        // ----------------------------------
+        // Check response
+        // ----------------------------------
+
+        if (!response.ok) {
+
+            const errorData =
+                await response.json();
+
+            throw new Error(
+                errorData.error ||
+                "Prediction failed."
+            );
+
+        }
+
+
+        // ----------------------------------
+        // Read JSON
+        // ----------------------------------
+
+        const data =
+            await response.json();
+
+
+        // ----------------------------------
+        // Error from Flask
+        // ----------------------------------
+
+        if (data.error) {
+
+            throw new Error(
+                data.error
+            );
+
+        }
+
+
+        // ----------------------------------
+        // Display prediction
+        // ----------------------------------
+
+        detectedLetter.textContent =
+            data.prediction;
+
+
+        confidenceValue.textContent =
+            data.confidence + "%";
+
+
+        progressFill.style.width =
+            data.confidence + "%";
+
+
+        // ----------------------------------
+        // Display meaning
+        // ----------------------------------
+
+        if (
+            data.prediction === "space"
+        ) {
+
+            meaningText.innerHTML =
+                "The detected gesture represents a " +
+                "<strong>SPACE</strong> between words.";
+
+        }
+
+        else if (
+            data.prediction === "del"
+        ) {
+
+            meaningText.innerHTML =
+                "The detected gesture represents " +
+                "<strong>DELETE</strong> in the ASL dataset.";
+
+        }
+
+        else if (
+            data.prediction === "nothing"
+        ) {
+
+            meaningText.innerHTML =
+                "No specific ASL sign was detected.";
+
+        }
+
+        else {
+
+            meaningText.innerHTML =
+                "The detected hand gesture represents " +
+                "the letter <strong>" +
+                data.prediction +
+                "</strong> in the American Sign Language alphabet.";
+
+        }
+
+
+        // ----------------------------------
+        // Save latest result
+        // ----------------------------------
+
+        window.lastPrediction = {
+            prediction:
+                data.prediction,
+
+            confidence:
+                data.confidence
+        };
+
+
+    }
+
+    catch (error) {
+
+
+        console.error(
+            "Prediction error:",
+            error
+        );
+
+
+        detectedLetter.textContent =
+            "ERROR";
+
+
+        confidenceValue.textContent =
+            "—";
+
+
+        progressFill.style.width =
+            "0%";
+
+
+        meaningText.textContent =
+            error.message;
+
+    }
+
+}
+
+
+
+// ==========================================
+// COPY REPORT
+// ==========================================
+
+copyBtn.addEventListener(
+    "click",
+    function () {
+
+
+        if (
+            !window.lastPrediction
+        ) {
+
+            alert(
+                "Please upload an image first."
+            );
+
+            return;
+
+        }
+
+
+        const report =
+            "SignVision ASL Detection\n\n" +
+
+            "Predicted Sign: " +
+            window.lastPrediction.prediction +
+
+            "\nConfidence: " +
+            window.lastPrediction.confidence +
+            "%";
+
+
+        navigator.clipboard.writeText(
+            report
+        );
+
+
+        alert(
+            "Report copied!"
+        );
+
+    }
+);
+
+
+
+// ==========================================
+// EXPORT JSON
+// ==========================================
+
+jsonBtn.addEventListener(
+    "click",
+    function () {
+
+
+        if (
+            !window.lastPrediction
+        ) {
+
+            alert(
+                "Please upload an image first."
+            );
+
+            return;
+
+        }
+
+
+        const json =
+            JSON.stringify(
+                window.lastPrediction,
+                null,
+                4
+            );
+
+
+        const blob =
+            new Blob(
+                [json],
+                {
+                    type:
+                        "application/json"
+                }
+            );
+
+
+        const url =
+            URL.createObjectURL(
+                blob
+            );
+
+
+        const link =
+            document.createElement(
+                "a"
+            );
+
+
+        link.href = url;
+
+        link.download =
+            "signvision_prediction.json";
+
+
+        link.click();
+
+
+        URL.revokeObjectURL(
+            url
+        );
+
+    }
+);
+
+
+</script>
+
+
+</body>
+
+</html>
